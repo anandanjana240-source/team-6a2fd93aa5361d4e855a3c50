@@ -84,6 +84,7 @@ function RaiseQueryContent({ user }: { user: { userId: string; username: string 
       try {
         const res = await fetch(`/api/faqs?q=${encodeURIComponent(question.trim())}`);
         const data = await res.json();
+        
 
         if (data.faqs) {
           // Take top 3
